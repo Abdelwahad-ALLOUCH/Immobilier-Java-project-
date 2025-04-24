@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="application.controller.LoginController" spacing="10"
+	alignment="CENTER" maxWidth="350" maxHeight="500"
+	styleClass="container">
+
+	<!-- Title -->
+	<Label text="Login" styleClass="title" />
+
+	<!-- Email Field -->
+	<TextField fx:id="emailField" promptText="Email"
+		styleClass="input" maxWidth="300" />
+	<Label fx:id="emailError" styleClass="error" visible="false"
+		text="Invalid email format." />
+
+	<!-- Password Field -->
+	<PasswordField fx:id="passwordField"
+		promptText="Password" style="-fx-font-size:13px;" styleClass="input" maxWidth="300" />
+	<Label fx:id="passwordError" styleClass="error" visible="false"
+		text="Password cannot be empty." />
+
+	<!-- Login Button -->
+	<!--<Button text="Login" onAction="#handleLogin" styleClass="button"
+		maxWidth="300" />   -->
+		
+	<Button text="Log in" onAction="#handleLogin" layoutX="50" layoutY="120"
+		 styleClass="btn"/>
+		
+	<!-- Switch to Sign Up Button -->
+	<Button text="Switch to Sign Up" onAction="#switchToSignUp"
+		styleClass="link-switch" maxWidth="300" />
+</VBox>

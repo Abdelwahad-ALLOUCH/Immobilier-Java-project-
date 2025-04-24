@@ -1,0 +1,35 @@
+/* Existing styles for #rentBtn, #contactBtn */
+#rentBtn, #contactBtn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #AF5F35;
+    -fx-font-size: 20px;
+    -fx-padding: 5 10;
+    -fx-border-width: 2px; 
+    -fx-border-radius: 5px;
+    -fx-border-color: #AF5F35;
+    -fx-font-weight: bold;
+    -fx-font-family: Imprima;
+}
+#contactBtn {
+    -fx-background-color: #AF5F35;
+    -fx-text-fill: #EFEFEF;
+}
+#contactBtn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(175, 95, 53, 0.75), 10, 0.5, 0, 0);
+    -fx-cursor: hand;
+}
+#rentBtn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(175, 95, 53, 0.25), 10, 0.5, 0, 0);
+    -fx-cursor: hand;
+}
+GridPane {
+    -fx-background-color: linear-gradient(to top, #E7E7E7, #FFF3CF);
+}
+
+/* New style for laabek-label */
+.laabek-label {
+    -fx-font-size: 50px;
+    -fx-font-family: Imprima;
+    -fx-font-weight: bold;
+    -fx-text-fill: #AF5F35;
+}

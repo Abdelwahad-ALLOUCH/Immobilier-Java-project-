@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controller.OffersController"
+            fx:id="mainContainer">
+    
+    <!-- Top Section: Search Bar -->
+    <top>
+        <HBox spacing="10" alignment="CENTER" styleClass="search-box">
+            <TextField fx:id="searchField" promptText="Search offers..." HBox.hgrow="ALWAYS"/>
+            <Button text="Search" onAction="#handleSearch"/>
+        </HBox>
+    </top>
+    
+    <!-- Left Section: Filters -->
+    <left>
+        <VBox spacing="15" styleClass="filters-box" minWidth="250">
+            <Label text="Filters" styleClass="section-title"/>
+            
+            <!-- City Filter -->
+            <VBox spacing="5">
+                <Label text="City"/>
+                <ComboBox fx:id="cityComboBox" maxWidth="Infinity"/>
+            </VBox>
+            
+            <!-- Price Range Filter -->
+            <VBox spacing="5">
+                <Label text="Price Range"/>
+                <HBox spacing="10">
+                    <TextField fx:id="minPrice" promptText="Min" prefWidth="100"/>
+                    <TextField fx:id="maxPrice" promptText="Max" prefWidth="100"/>
+                </HBox>
+            </VBox>
+            
+            <!-- Property Type Filter -->
+            <VBox spacing="5">
+                <Label text="Property Type"/>
+                <VBox spacing="5">
+                    <CheckBox text="House" fx:id="houseCheck" />
+                    <CheckBox text="Appartment" fx:id="apartmentCheck" />
+                    <CheckBox text="Room" fx:id="roomCheck" />
+                    <CheckBox text="Villa" fx:id="villaCheck" />
+                </VBox>
+            </VBox>
+            
+            <Button text="Apply Filters" onAction="#handleFilterApply" maxWidth="Infinity"/>
+            
+        </VBox>
+    </left>
+    
+    <!-- Center Section: Offers Grid -->
+    <center>
+        <ScrollPane fitToWidth="true" id="offers-container">
+            <VBox fx:id="offersContainer" spacing="20" styleClass="offers-container" >
+                <!-- Offers will be added here programmatically -->
+            </VBox>
+            
+        </ScrollPane>
+            
+    </center>
+</BorderPane>

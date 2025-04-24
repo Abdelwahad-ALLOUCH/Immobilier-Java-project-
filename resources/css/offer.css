@@ -1,0 +1,89 @@
+/* Overall Container */
+label{
+	-fx-font-family: Imprima;
+}
+button{-fx-font-family: Imprima;}
+.offer-container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-background-radius: 10;
+}
+
+/* Card Styling */
+.offer-card {
+    -fx-background-color: #FFF3CF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.offer-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 3);
+}
+
+/* Images */
+.main-image {
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+
+.thumbnail-image {
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 3, 0, 0, 1);
+}
+
+/* Price Label */
+.price-label {
+	-fx-font-family: Imprima;
+    -fx-font-size: 20px;
+    -fx-text-fill: #AF5F35;
+    -fx-font-weight: bold;
+}
+
+/* Location Label */
+.location-label {
+	-fx-font-family: Imprima;
+    -fx-font-size: 14px;
+    -fx-text-fill: #AF5F35;
+}
+
+/* Section Headers */
+.section-header {
+	-fx-font-family: Imprima;
+    -fx-font-size: 16px;
+    -fx-text-fill: #AF5F35;
+    -fx-font-weight: bold;
+}
+
+/* Owner Details */
+.detail-label {
+	-fx-font-family: Imprima;
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+
+.owner-section {
+	
+    -fx-background-color: #FFF3CF;
+    -fx-padding: 10;
+    -fx-background-radius: 8;
+}
+
+/* Back Button */
+.back-button {
+    -fx-background-color: #AF5F35;
+    -fx-text-fill: #FFF3CF;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+}
+
+.back-button:hover {
+    -fx-background-color: #D97C4F;
+}
+
+/* Bold Text */
+.bold-text {
+    -fx-font-weight: bold;
+}

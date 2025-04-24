@@ -1,0 +1,75 @@
+.container {
+    -fx-padding: 20;
+    -fx-background-color: linear-gradient(to top, #E7E7E7, #FFF3CF);
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0, 0, 4);
+    -fx-alignment: center;
+}
+Button{
+	-fx-cursor: hand; /* Pointer cursor for clickable elements */
+}
+/* Style for error messages */
+.error {
+    -fx-text-fill: #E74C3C; /* Red for errors */
+    -fx-font-size: 12px;
+    -fx-padding: 2px;
+}
+
+/* Titles */
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #AF5F35;
+    -fx-font-family:Imprima;
+}
+
+/* Input Fields */
+.input {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-border-color: #AF5F35; /* Light grey border */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 12;
+    -fx-background-color: transpant;
+    -fx-border-width:0 0 3 0;
+    -fx-font-family:Imprima;
+    -fx-font-size:15px;
+}
+
+.input:focused {
+    -fx-border-color: #AF5F35;
+    -fx-border-width:0 3 3 3;
+}
+
+/*  Buttons*/ 
+.btn {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 45px;
+    -fx-background-color: #AF5F35;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-padding: 5 10;
+    -fx-border-width: 2px; 
+    -fx-border-radius: 5px;
+    -fx-font-family: Imprima;
+}
+
+/* Link Buttons */
+.link-switch {
+    -fx-background-color: transparent; /* No background */
+    -fx-text-fill: #AF5F35; /* Blue for links */
+    -fx-font-size: 14px; /* Medium-sized text */
+    -fx-padding: 5 0; /* Padding for better spacing */
+    -fx-font-weight: bold;
+    -fx-font-family: Imprima; /* Make it stand out slightly */
+}
+
+.link-switch:hover {
+    -fx-underline: true; /* Add underline on hover */
+}
+
+
+
+
+

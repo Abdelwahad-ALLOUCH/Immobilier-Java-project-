@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="form-container" 
+    fx:controller="application.controller.PublishOfferController">
+    
+    <top>
+        <Label text="Publish Your Offer" styleClass="form-title" BorderPane.alignment="CENTER" />
+    </top>
+
+    <center>
+        <GridPane hgap="20" vgap="10" styleClass="form-grid">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <!-- Column constraints -->
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25" /> <!-- Left column labels -->
+                <ColumnConstraints percentWidth="25" /> <!-- Left column fields -->
+                <ColumnConstraints percentWidth="25" /> <!-- Right column labels -->
+                <ColumnConstraints percentWidth="25" /> <!-- Right column fields -->
+            </columnConstraints>
+
+            <!-- Left Column -->
+            <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <TextArea fx:id="descriptionArea" promptText="Enter a description of the offer" />
+                <Label fx:id="descriptionError" styleClass="error-label" />
+            </VBox>
+
+            <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <TextField fx:id="priceField" promptText="Enter price" />
+                <Label fx:id="priceError" styleClass="error-label" />
+            </VBox>
+
+            <Label text="Number of Rooms:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <TextField fx:id="roomsField" promptText="Enter number of rooms" />
+                <Label fx:id="roomsError" styleClass="error-label" />
+            </VBox>
+
+            <Label text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <ComboBox fx:id="typeComboBox" promptText="Select type" />
+                <Label fx:id="typeError" styleClass="error-label" />
+            </VBox>
+
+            <!-- Right Column -->
+            <Label text="City:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <!--  <VBox spacing="5" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                <TextField fx:id="cityField" promptText="Enter city" />
+                
+            </VBox>-->
+			<!-- City Filter -->
+            <VBox spacing="5" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                <ComboBox fx:id="cityComboBox" maxWidth="Infinity"/>
+                <Label fx:id="cityError" styleClass="error-label" />
+            </VBox>
+            <Label text="Street:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <VBox spacing="5" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <TextField fx:id="streetField" promptText="Enter street (optional)" />
+                <Label fx:id="streetError" styleClass="error-label" />
+            </VBox>
+
+            <Label text="Number:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <VBox spacing="5" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <TextField fx:id="numberField" promptText="Enter number" />
+                <Label fx:id="numberError" styleClass="error-label" />
+            </VBox>
+
+            <!-- Images Section (spans both columns) -->
+            <Label text="Select Images (1 to 7):" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="3">
+                <Button text="Select Images" fx:id="selectImagesButton" />
+                <Label fx:id="imagesError" styleClass="error-label" />
+                <HBox fx:id="imageDisplayBox" spacing="10" styleClass="image-display-box" />
+            </VBox>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <Button text="Publish Offer" fx:id="publishButton" styleClass="publish-button" 
+                BorderPane.alignment="CENTER" onAction="#handlePublish" />
+    </bottom>
+</BorderPane>

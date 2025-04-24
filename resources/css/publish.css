@@ -1,0 +1,55 @@
+.form-container {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 20;
+}
+
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2a2e3a;
+    -fx-padding: 10;
+}
+
+.form-grid {
+    -fx-padding: 20;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.form-grid Label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}
+
+.form-grid TextField,
+.form-grid TextArea,
+.form-grid ComboBox {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+
+.publish-button {
+    -fx-background-color: #2a2e3a;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.publish-button:hover {
+    -fx-background-color: #444;
+}
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+    -fx-padding: 5 0 0 0;
+}

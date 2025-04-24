@@ -1,0 +1,213 @@
+/* Top Navigation Bar */
+.top-nav-bar {
+    -fx-background-color: #EFEFEF; /* Light grey background */
+    -fx-padding: 10.0 30.0;
+    -fx-spacing: 20;
+}
+
+/* Logo styling */
+.logo {
+    -fx-font-size: 20px; /* Adjust font size */
+    -fx-font-weight: bold;
+    -fx-text-fill: #AF5F35; /* Black text */
+    -fx-font-family: Imprima;
+}
+
+/* Navigation Buttons */
+.top-nav-bar .nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #AF5F35; /* Brown text */
+    -fx-font-size: 16px;
+    -fx-padding: 5 10;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-pref-width: 80px; /* Adjust width for proper alignment */
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-family: Imprima;
+}
+
+.top-nav-bar .nav-button:hover {
+    -fx-border-color: #AF5F35;
+    -fx-text-fill: #AF5F35; /* Slightly darker shade of brown on hover */
+
+}
+
+/* Signup and Login Buttons */
+#signupButton, #loginButton , #logoutButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #AF5F35;
+    -fx-font-size: 16px;
+    -fx-padding: 5 10;
+    -fx-border-width :2px; 
+    -fx-border-radius: 5px;
+    -fx-border-color: #AF5F35; /* Border for Signup and Login */
+    -fx-font-family: Imprima;
+    
+}
+#logoutButton{
+	-fx-min-width: 120px;
+	-fx-max-width: 140px;
+}
+#loginButton {
+	-fx-background-color:#AF5F35 ;
+    -fx-text-fill: #EFEFEF;
+}
+
+#signupButton:hover{
+	-fx-background-color:#AF5F35 ;
+    -fx-text-fill: #EFEFEF;
+}
+#loginButton:hover {
+    -fx-background-color: #FFF3CF;
+    -fx-text-fill: #AF5F35;
+}
+
+/* Spacer */
+StackPane {
+    -fx-background-color: #FFF3CF;
+}
+BorderPane{
+	-fx-background-color: #FFF3CF;
+}
+
+
+/* Scrollbar Styles */
+
+
+
+
+#menu {
+    -fx-background-color: transparent; /* No visible background */
+    -fx-text-fill: #AF5F35; /* Text color */
+    -fx-font-size: 16px; /* Text size */
+    -fx-padding: 5 10; /* Internal padding, affects width and height */
+    -fx-border-width: 2px; /* Border thickness */
+    -fx-border-radius: 5px; /* Rounded corners for border */
+    -fx-border-color: #AF5F35; /* Border color */
+    -fx-font-family: Imprima; /* Font family */
+    -fx-min-width: 120px; /* Minimum width */
+    -fx-max-width: 200px; /* Maximum width */
+    -fx-alignment: center; /* Align text to the center */
+}
+#menu .text{
+	-fx-fill : white;
+	-fx-alignment: center;
+	-fx-min-width: 140.0;
+}
+/* Hide the arrow of the MenuButton */
+#menu .arrow {
+    -fx-background-color: transparent; /* Make the arrow invisible */
+    -fx-shape: ""; /* Remove its shape */
+}
+
+/* Remove unnecessary top/bottom spacing inside the dropdown */
+.context-menu {
+    -fx-padding: 0;
+    -fx-background-color: #AF5F35; /* Ensure consistency */
+}
+/* Style for MenuItem to match the dropdown items */
+.menu-item {
+    -fx-background-color: #AF5F35;
+    -fx-text-fill: white !important; /* Match with nav-button text color */
+    -fx-padding: 5.0 10.0;
+}
+
+.menu-item:hover {
+    -fx-background-color: #2c3e50; /* Hover background */
+    -fx-text-fill: white !important; /* Hover text color */
+}
+ /*Footer styles */
+
+.footer {
+    -fx-background-color: #7F8C8D;
+    -fx-padding: 15.0;
+    -fx-font-size: 14.0px;
+    -fx-text-fill: #fff; /* Medium grey */
+}
+
+
+
+/*----------------*/ 
+/* sidemenu.css */
+
+.side-menu {
+    -fx-background-color: #2D3447;
+    -fx-pref-width: 150px;
+    -fx-padding: 10px 0;
+}
+
+.side-menu-button {
+    -fx-background-color: #2D3447 !important;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 15px 20px;
+    -fx-border-width: 0;
+    -fx-pref-width: 250px;
+    -fx-cursor: hand;
+}
+
+.side-menu-button:hover {
+    -fx-background-color: #3B4559;
+}
+
+.side-menu-button:pressed {
+    -fx-background-color: #1A1F2C;
+}
+
+.side-menu-button.active {
+    -fx-background-color: #3B4559;
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-color: #2196F3;
+}
+
+/* Add this to your existing layout.css */
+
+
+/*
+ * 
+ .header {
+    -fx-background-color: #FFFFFF; 
+    -fx-padding: 15.0 25.0; 
+    
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.1), 8.0, 0.0, 0.0, 4.0);
+}
+ 
+ .logo {
+    -fx-font-size: 22.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff; 
+}
+* 
+* 
+Button{
+	-fx-cursor: hand; 
+
+
+.top-nav-bar {
+    -fx-background-color: #34495e;
+    -fx-padding: 10.0;
+}
+
+
+.top-nav-bar .nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white ;
+    -fx-font-size: 14.0px;
+    -fx-padding: 8.0 0;
+    -fx-border-color: transparent;
+     -fx-pref-width: 115.0px;
+    -fx-alignment: center; 
+    -fx-font-weight: bold;
+}
+
+.top-nav-bar .nav-button:hover {
+    -fx-background-color: #2c3e50;
+    -fx-border-radius: 3.0px;
+}
+
+StackPane {
+    -fx-background-color: #EFEFEF;
+}
+*/

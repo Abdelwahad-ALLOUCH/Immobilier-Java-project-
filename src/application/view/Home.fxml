@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefWidth="1251.0" styleClass="root"
+	xmlns:fx="http://javafx.com/fxml/1">
+
+	<columnConstraints>
+		<ColumnConstraints hgrow="ALWAYS" minWidth="10.0"
+			percentWidth="45.0" />
+		<ColumnConstraints hgrow="ALWAYS" minWidth="10.0"
+			percentWidth="55.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints fx:id="picBackgr" maxHeight="550.0"
+			minHeight="10.0" prefHeight="476.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="550.0" minHeight="10.0"
+			prefHeight="258.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="550.0" minHeight="10.0"
+			prefHeight="476.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+	<children>
+		<!-- Texte à gauche -->
+		<VBox alignment="CENTER_LEFT" prefHeight="549.0"
+			prefWidth="620.0" spacing="10.0" style="-fx-padding: 40.0"
+			styleClass="homeTxt" GridPane.columnIndex="0" GridPane.rowIndex="0">
+			<HBox prefHeight="53.0" prefWidth="456.0" spacing="15.0">
+				<children>
+					<Label fx:id="laabekLabel" styleClass="laabek-label"
+						text="Let’s Find a" />
+					<Label fx:id="laabekLabel1" styleClass="laabek-label"
+						text="Home" />
+				</children>
+			</HBox>
+			<Label fx:id="scndText"
+				style="-fx-font-size: 36px; -fx-font-family: Imprima;"
+				text="That’s Perfect for you" />
+			<HBox alignment="CENTER_LEFT" prefHeight="41.0"
+				prefWidth="589.0" style="-fx-spacing: 30.0;">
+				<children>
+					<Label fx:id="rentBtn" text="Rent a House">
+						<HBox.margin>
+							<Insets top="30.0" />
+						</HBox.margin>
+					</Label>
+					<Label fx:id="contactBtn" style="-fx-border-radius: 10;"
+						text="Contact us">
+						<HBox.margin>
+							<Insets top="30.0" />
+						</HBox.margin>
+					</Label>
+				</children>
+			</HBox>
+		</VBox>
+
+		<!-- Image à droite -->
+		<ImageView fitHeight="520.0" fitWidth="680.0"
+			translateX="20.0" translateY="20.0" GridPane.columnIndex="1"
+			GridPane.rowIndex="0">
+			<image>
+				<Image
+					url="@../../../resources/images/home.png" />
+			</image>
+		</ImageView>
+	</children>
+</GridPane>

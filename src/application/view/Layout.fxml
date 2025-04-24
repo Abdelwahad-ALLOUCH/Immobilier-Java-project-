@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<BorderPane prefHeight="518.0" prefWidth="808.0" stylesheets="@../../../resources/css/layout.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.BaseController">
+
+	<!-- Top Navigation Bar -->
+	<top>
+		<HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: FFF3CF;" styleClass="top-nav-bar">
+			<!-- Logo -->
+			<Label styleClass="logo" text="ImmoRenter" />
+
+			<!-- Spacer -->
+			<StackPane style="-fx-background-color: FFF3CF;" HBox.hgrow="ALWAYS" />
+
+			<!-- Navigation Buttons -->
+			<HBox alignment="CENTER_RIGHT" spacing="20" styleClass="sidebar">
+				<Button onAction="#navigateHome" styleClass="nav-button" text="Home" />
+				<Button onAction="#navigateOffers" styleClass="nav-button" text="Offers" />
+				<Button onAction="#navigateContact" styleClass="nav-button" text="Contact" />
+				<!-- Styled MenuButton -->
+				<MenuButton id="menu" fx:id="publishButton" mnemonicParsing="false" styleClass="nav-button" text="Publish">
+
+
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#navigatePublishOffer" styleClass="menu-item" text="Offer" />
+						<MenuItem mnemonicParsing="false" onAction="#navigatePublishExpectation" styleClass="menu-item" text="Expectation" />
+					</items>
+				</MenuButton>
+
+				<Button fx:id="signupButton" onAction="#navigateSignUp" styleClass="nav-button" text="Signup" />
+				<Button fx:id="loginButton" onAction="#navigateLogin" styleClass="nav-button" text="Login" />
+				<Button fx:id="logoutButton" onAction="#handleLogout" styleClass="nav-button" text="Log out" />
+
+
+			</HBox>
+		</HBox>
+	</top>
+
+	<!-- Content Area -->
+	<center>
+		<ScrollPane fitToHeight="true" fitToWidth="true" styleClass="content-scroll">
+			<StackPane fx:id="contentArea">
+				<!-- Add dynamic content here -->
+			</StackPane>
+		</ScrollPane>
+	</center>
+ <!-- Left Side Menu -->
+    <left>
+        <VBox fx:id="adminNavBar" styleClass="side-menu">
+            <JFXButton onAction="#navigateAdminDashboard" styleClass="side-menu-button" text="Dashboard">
+                <!-- You can add an icon here -->
+            </JFXButton>
+            
+            <JFXButton onAction="#navigateAdminUsers" styleClass="side-menu-button" text="Users">
+                <!-- You can add an icon here -->
+            </JFXButton>
+            
+            <JFXButton onAction="#navigateAdminOffers" styleClass="side-menu-button" text="Offers">
+                <!-- You can add an icon here -->
+            </JFXButton>
+            
+            <JFXButton onAction="#navigateAdminExpectations" styleClass="side-menu-button" text="Expectations">
+                <!-- You can add an icon here -->
+            </JFXButton>
+        </VBox>
+    </left>
+	<!-- Footer -->
+	<bottom>
+		<HBox alignment="CENTER" spacing="10" styleClass="footer">
+			<Label text="Footer Content" />
+		</HBox>
+	</bottom>
+</BorderPane>
